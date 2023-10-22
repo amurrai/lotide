@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
   for (const item of allItems) {
-    if (item in itemsToCount && itemsToCount[item] === true) {
+    if (item in itemsToCount && itemsToCount[item]) {
       if (results[item]) {
         results[item] ++;
       } else {
