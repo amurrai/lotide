@@ -1,8 +1,36 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
+  // Checking for objects
+  if (typeof actual === 'object' && typeof expected === 'object') {
+    // Getting keys for each object
+    let actualKeys = Object.getOwnPropertyNames(actual);
+    let expectedKeys = Object.getOwnPropertyNames(expected);
+    // Checking for equal number of keys
+    if (actualKeys.length !== expectedKeys.length) {
+      console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+      return false;
+    } else {
+      // Iterating over properties to compare values
+      for(const key of actualKeys) {
+        if (!expected.hasOwnProperty(key)) {
+          console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+          return false;
+        } else if (actual.key !== expected.key) {
+          console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+          return false;          
+        }
+      }
+      console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
+      return true;
+    }
+
   } else {
-    console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+  if (actual === expected) {
+      console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
+      return true;
+    } else {
+      console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+      return false;
+    }
   }
 };
 
