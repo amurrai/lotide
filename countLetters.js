@@ -6,29 +6,29 @@ const assertEqual = function(actual, expected) {
     let expectedKeys = Object.getOwnPropertyNames(expected);
     // Checking for equal number of keys
     if (actualKeys.length !== expectedKeys.length) {
-      console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+      console.log(`🛑🛑🛑 Assertion failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
       return false;
     } else {
       // Iterating over properties to compare values
       for (const key of actualKeys) {
         if (!Object.prototype.hasOwnProperty.call(expected, key)) {
-          console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+          console.log(`🛑🛑🛑 Assertion failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
           return false;
-        } else if (actual.key !== expected.key) {
-          console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+        } else if (actual[key] !== expected[key]) {
+          console.log(`🛑🛑🛑 Assertion failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
           return false;
         }
       }
-      console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
+      console.log(`✅✅✅ Assertion passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
       return true;
     }
 
   } else {
     if (actual === expected) {
-      console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
+      console.log(`✅✅✅ Assertion passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
       return true;
     } else {
-      console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+      console.log(`🛑🛑🛑 Assertion failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
       return false;
     }
   }
