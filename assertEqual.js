@@ -10,13 +10,13 @@ const assertEqual = function(actual, expected) {
       return false;
     } else {
       // Iterating over properties to compare values
-      for(const key of actualKeys) {
-        if (!expected.hasOwnProperty(key)) {
+      for (const key of actualKeys) {
+        if (!Object.prototype.hasOwnProperty.call(expected, key)) {
           console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
           return false;
         } else if (actual.key !== expected.key) {
           console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
-          return false;          
+          return false;
         }
       }
       console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
@@ -24,7 +24,7 @@ const assertEqual = function(actual, expected) {
     }
 
   } else {
-  if (actual === expected) {
+    if (actual === expected) {
       console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
       return true;
     } else {
