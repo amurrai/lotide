@@ -49,3 +49,5 @@ const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"]
 assertObjectsEqual(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
 
 assertObjectsEqual([1, [2]], [1, [2]]);
+
+assertObjectsEqual({name: "A", sub: {type: "nested"}}, {name: "A", sub: {type: "nested"}});
