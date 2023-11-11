@@ -18,21 +18,21 @@ const letterPositions = require('./letterPositions');
 
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  flatten: flatten,
-  map: map,
-  takeUntil: takeUntil,
-  without: without,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectsEqual: assertObjectsEqual,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  letterPositions: letterPositions
+  head,
+  tail,
+  middle,
+  flatten,
+  map,
+  takeUntil,
+  without,
+  findKey,
+  findKeyByValue,
+  countLetters,
+  countOnly,
+  assertArraysEqual,
+  assertEqual,
+  assertObjectsEqual,
+  eqArrays,
+  eqObjects,
+  letterPositions
 };
