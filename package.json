@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@amurrai/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "Training project for Lighthouse Labs",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/amurrai/lotide.git"
   },
-  "author": "",
+  "author": "amurrai",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amurrai/lotide/issues"
